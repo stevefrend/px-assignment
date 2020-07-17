@@ -17,38 +17,36 @@
 </template>
 
 <script>
-/* eslint-disable */
-import CompanyService from "../services/CompanyService";
-import EditCompanyEmployeeAmount from "./EditCompanyEmployeeAmount";
+import CompanyService from '../services/CompanyService';
+import EditCompanyEmployeeAmount from './EditCompanyEmployeeAmount.vue';
 
 export default {
-  name: "CompanyPage",
+  name: 'CompanyPage',
   components: {
     EditCompanyEmployeeAmount,
-    
   },
   data() {
     return {
       company: {},
-      employees: 0
+      employees: 0,
     };
   },
   computed: {
     subsPerEmployee() {
       return this.company.subscriptionsPerEmployee * this.employees;
-    }
+    },
   },
   methods: {
     updatedEmployees(newEmployeeCount) {
       this.employees = newEmployeeCount;
-    }
+    },
   },
   mounted() {
-    CompanyService.getById(+this.$route.params.id).then(res => {
+    CompanyService.getById(+this.$route.params.id).then((res) => {
       this.company = res;
       this.employees = res.numberOfEmployees;
     });
-  }
+  },
 };
 </script>
 

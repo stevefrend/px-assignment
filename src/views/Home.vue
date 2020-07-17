@@ -13,28 +13,24 @@
 </template>
 
 <script>
-/* eslint-disable */
-import CompanyItem from "./CompanyItem.vue";
-import CompanyService from "../services/CompanyService";
+import CompanyItem from './CompanyItem.vue';
+import CompanyService from '../services/CompanyService';
 
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    CompanyItem
+    CompanyItem,
   },
   data() {
     return {
-      companies: []
+      companies: [],
     };
   },
   mounted() {
-    CompanyService.getAll().then(res => (this.companies = res));
-  }
+    CompanyService.getAll().then((res) => {
+      this.companies = res;
+    });
+  },
 };
 </script>
-
-
-
-
-

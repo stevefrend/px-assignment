@@ -12,21 +12,19 @@
 </template>
 
 <script>
-/* eslint-disable */
-
 export default {
-  name: "EditCompanyEmployeeAmount",
-  props: ["employeeAmount"],
-  data: function() {
+  name: 'EditCompanyEmployeeAmount',
+  props: ['employeeAmount'],
+  data() {
     return {
-      newEmployeeAmount: this.employeeAmount
+      newEmployeeAmount: this.employeeAmount,
     };
   },
   methods: {
     updateEmployeeCount() {
-      this.$emit("updatedEmployees", this.newEmployeeAmount);
-    }
-  }
+      this.$emit('updatedEmployees', this.newEmployeeAmount);
+    },
+  },
 };
 </script>
 
