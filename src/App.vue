@@ -11,5 +11,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @import '~bulma/bulma';
+  padding-top: 100px;
 }
 </style>

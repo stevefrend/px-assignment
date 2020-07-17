@@ -1,4 +1,6 @@
 <template>
+<div class="container">
+  <h1 class="title">Companies</h1>
   <ul>
     <CompanyItem
       :key="company.id"
@@ -7,12 +9,14 @@
       :id="company.id"
     />
   </ul>
+</div>
 </template>
 
 <script>
 /* eslint-disable */
 import CompanyItem from "./CompanyItem.vue";
 import CompanyService from "../services/CompanyService";
+
 
 export default {
   name: "home",
@@ -29,3 +33,8 @@ export default {
   }
 };
 </script>
+
+
+
+
+
