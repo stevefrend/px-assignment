@@ -14,13 +14,13 @@
 </template>
 
 <script>
-/* eslint-disable */
+
 export default {
-  name: "CompanyItem",
+  name: 'CompanyItem',
   props: {
     id: Number,
-    name: String
-  }
+    name: String,
+  },
 };
 </script>
 

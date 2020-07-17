@@ -76,10 +76,6 @@ export default {
   padding: 50px 20px;
 }
 
-label {
-  /* margin-right: 300px; */
-}
-
 form {
   display: flex;
   flex-direction: column;
